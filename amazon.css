@@ -39,7 +39,7 @@ nav {
 .location {
     margin: 10px;
     height: 100%;
-    margin-left: 30px;
+    /* margin-left: 30px; */
     padding: 5px;
 }
 
@@ -68,14 +68,14 @@ nav {
 } */
 
 .search {
-    width: 35px;
+    width: 55px;
     height: auto;
     margin-left: 20px;
     position: relative;
 }
 
 .search-bar {
-    width:50vh;
+    width:70%;
 }
 
 .search-icon i {
@@ -180,6 +180,10 @@ nav {
 .options p:hover {
     outline: 1px solid white;
 }
+.circles{
+    width: 100%;
+    
+}
 
 main {
     /* height: 500px; */
@@ -194,6 +198,12 @@ main img {
     width: 100%;
 }
 
+.items-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0 15px 15px 15px;
+}
 .items-container {
     display: flex;
     flex-wrap: wrap;
@@ -216,9 +226,33 @@ main img {
     overflow: hidden;
 }
 
+
 .item-card img {
     height: auto;
     width: 150px;
+    border: 2px solid black;
+    object-fit: cover;
+}
+
+
+.mens-item-card {
+    /* height: auto; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 300px;
+    gap: 1rem;
+    font-size: .7rem;
+    background-color: white;
+    padding: 1rem;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.mens-item-card img {
+    height: auto;
+    width: 100px;
     border: 2px solid black;
     object-fit: cover;
 }
@@ -326,7 +360,7 @@ main img {
 
 }
 
-/* Small Devices */
+
 @media screen and (max-width: 1024px) {
     :root {
         font-size: 2vw;
@@ -334,7 +368,7 @@ main img {
 
     /* Header  */
     nav {
-        height: 5vw;
+        height: 7vw;
         font-size: .9rem;
     }
 
@@ -343,7 +377,15 @@ main img {
     }
 
     .nav-logo img {
-        width: 7vw;
+        width: 10vw;
+    }
+    .account{
+        margin-top: 7px;
+        font-size: 9px;
+    }
+    .Return{
+        margin-top: 8px;
+        font-size: 9px;
     }
 
     .nav-center {
@@ -356,6 +398,7 @@ main img {
         padding: auto;
     }
 
+    
     .search-bar {
         display: none;
     }
@@ -363,25 +406,37 @@ main img {
         padding: .5rem .5rem;
     }
 
+    .lang{
+        color: black;
+        width:70px;
+        height: 20px;
+        font-size: 10px;
+        padding: 1px;
+    }
+    
+
     .cart1 {
 
-        height: 5vw;
-        width: 3vw;
-        margin-top: 10px;
+        height: 10px;
+        width: 10px;
+        margin-top: 5px;
         font-size: .9rem;
+        text-decoration: none;
     }
 
     .search option{
         height: 5vw;
     }
+    .options{
+        margin-top: 7px;
+    }
 
-    .options  {
-        display: none; 
-
+    .options .op{
+        display: none;
     }
 .list{
-    font-size: 17px;
-    margin:0px 20px 10px 0px;
+    font-size: 10px;
+    margin:7px 20px 10px 0px;
 
 }
     .op{
@@ -407,10 +462,10 @@ main img {
     }
 
     .item-card {
-        height: 25vw;
+        height: auto;
         font-size: .5rem;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: space-evenly;
     }
 
@@ -420,7 +475,7 @@ main img {
     }
 
     .item-card h4{
-        font-size:10px ;
+        font-size:10px;
     }
 
     .item-card img {
@@ -435,9 +490,8 @@ main img {
     .footer-links {
         height: auto;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        flex-direction: row;
+        
         font-size: medium;
         
     }
